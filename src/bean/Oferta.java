@@ -10,8 +10,8 @@ import java.util.List;
 public class Oferta {
 
   private Motorista motorista;
-  private String partida;
-  private String destino;
+  private String localPartida;
+  private String localDestino;
   private Date dataSaida;
   private double preco;
   private int vagas;
@@ -22,10 +22,10 @@ public class Oferta {
 
   }
 
-  public Oferta(Motorista motorista, String partida, String destino, Date dataSaida, double preco, int vagas) {
+  public Oferta(Motorista motorista, String localPartida, String localDestino, Date dataSaida, double preco, int vagas) {
     this.motorista = motorista;
-    this.partida = partida;
-    this.destino = destino;
+    this.localPartida = localPartida;
+    this.localDestino = localDestino;
     this.dataSaida = dataSaida;
     this.preco = preco;
     this.vagas = vagas;
@@ -40,20 +40,20 @@ public class Oferta {
     this.motorista = motorista;
   }
 
-  public String getPartida() {
-    return partida;
+  public String getLocalPartida() {
+    return localPartida;
   }
 
-  public void setPartida(String partida) {
-    this.partida = partida;
+  public void setLocalPartida(String localPartida) {
+    this.localPartida = localPartida;
   }
 
-  public String getDestino() {
-    return destino;
+  public String getLocalDestino() {
+    return localDestino;
   }
 
-  public void setDestino(String destino) {
-    this.destino = destino;
+  public void setLocalDestino(String localDestino) {
+    this.localDestino = localDestino;
   }
 
   public Date getDataSaida() {
