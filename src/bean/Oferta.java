@@ -31,7 +31,7 @@ public class Oferta {
     this.vagas = vagas;
     this.clientes = new ArrayList<>();
   }
-
+  
   public Motorista getMotorista() {
     return motorista;
   }
