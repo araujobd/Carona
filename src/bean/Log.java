@@ -18,4 +18,8 @@ public class Log {
     }
     return INSTANCE;
   }
+  
+  public void escreve(){
+      System.out.println("Escrevendo no arquivo de log!");
+  }
 }
