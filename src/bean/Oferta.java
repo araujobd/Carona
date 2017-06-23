@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Created by bruno on 22/06/17.
+ * Padrão Singleton
  */
 public class Oferta {
 
@@ -15,7 +16,6 @@ public class Oferta {
   private Date dataSaida;
   private double preco;
   private int vagas;
-
   private List<Cliente> clientes;
 
   private Oferta() {
