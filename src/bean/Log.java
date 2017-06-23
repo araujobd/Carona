@@ -5,17 +5,17 @@ package bean;
  * Padrão Singleton
  */
 public class Log {
-    private static Log control = null;
+  private static Log INSTANCE = null;
 
-    private Log(){
+  private Log(){
 
+  }
+
+  public static Log getInstancia(){
+    if(INSTANCE == null){
+      INSTANCE = new Log();
+      System.out.println("Instância Criada");
     }
-
-    public static Log getInstancia(){
-        if(control == null){
-            control = new Log();
-            System.out.println("Instância Criada");
-        }
-        return control;
-    }
+    return INSTANCE;
+  }
 }
