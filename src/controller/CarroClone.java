@@ -8,18 +8,18 @@ package controller;
 import bean.Carro;
 
 /**
- *
  * @author cainan
+ * Padrão Prototype
  */
 public class CarroClone extends Carro{
 
-    public CarroClone(String placa, String modelo, String marca, String cor) {
-        super(placa, modelo, marca, cor);
-    }
+  public CarroClone(String placa, String modelo, String marca, String cor) {
+    super(placa, modelo, marca, cor);
+  }
 
-    @Override
-    public Carro clonar(String placa, String modelo, String marca, String cor) {
-        return new CarroClone(placa, modelo, marca, cor);
-    }
+  @Override
+  public Carro clonar(String placa, String modelo, String marca, String cor) {
+    return new CarroClone(placa, modelo, marca, cor);
+  }
     
 }
