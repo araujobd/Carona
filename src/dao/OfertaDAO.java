@@ -1,41 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import bean.Oferta;
 
 /**
- *
- * @author cainan
+ * Created by cainan
+ * Update by arthur
+ * Padrões Facade, Singleton, TemplateMethod (concreto)
  */
-public class OfertaDAO extends DAO<Oferta>{
+public class OfertaDAO extends DAO<Oferta> {
 
-    @Override
-    void adicionar(Oferta oferta) {
-        System.out.println("Criando oferta de carona: ");
-    }
+  private static OfertaDAO INSTANCE = null;
+  
+  private OfertaDAO(){
+  }
 
-    @Override
-    void atualizar(Oferta oferta) {
-        System.out.println("Alterando oferta de carona: ");
-    }
+  public static DAO<Oferta> getInstance() {
+    if (INSTANCE == null)
+      INSTANCE = new OfertaDAO();
+    return INSTANCE;
+  }
 
-    @Override
-    void remover(Oferta oferta) {
-        System.out.println("Apagando oferta de carona: ");
-    }
+  @Override
+  void adicionar(Oferta oferta) {
+//    oferta.add(usuario);
+    System.out.println("Adicionando oferta:" + oferta);
+  }
 
-    @Override
-    void buscar(int id) {
-        System.out.println("Pesquisando oferta de carona pelo id "+id);
-    }
+  @Override
+  void atualizar(Oferta oferta) {
+//    int i;
+//    for (i=0; i < oferta.size(); i++)
+//      if (oferta.get(i).getLogin().contentEquals(oferta.getLogin()))
+//        ofertas.set(i, oferta);
+    System.out.println("Editando uma oferta: " + oferta);
+  }
 
-    @Override
-    void listar() {
-        System.out.println("Listando ofertas de carona disponíveis.");
-    }
-    
+  @Override
+  void remover(Oferta oferta) {
+//    ofertas.remove(usuario);
+    System.out.println("Removendo oferta: " + oferta);
+  }
+
+  @Override
+  void buscar(int id) {
+//    for (Ofertas oferta : ofertas)
+//      if (usuario.getLogin().contentEquals(String.valueOf(id)))
+//        return usuario;
+    System.out.println("Procurando oferta com o id = " + id);
+  }
+
+  @Override
+  void listar() {
+    System.out.println("Listando todos as ofertas do banco!");
+  }
 }
