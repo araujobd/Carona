@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Main;
+package main;
 
+import bean.Log;
 import controller.LoginUsuario;
 
 /**
@@ -12,9 +13,15 @@ import controller.LoginUsuario;
  * @author cainan
  */
 public class Principal {
-    public static void main(String[] args){
-        LoginUsuario u1 = new LoginUsuario("cliente");
-        LoginUsuario u2 = new LoginUsuario("motorista");
-        LoginUsuario u3 = new LoginUsuario("nenhum dos dois");
-    }
+  public static void main(String[] args){
+    Log log = null;
+    log = Log.getInstancia();
+    log.escreve();
+    LoginUsuario u1 = new LoginUsuario("cliente");
+    log.escreve();
+    LoginUsuario u2 = new LoginUsuario("motorista");
+    log.escreve();
+    LoginUsuario u3 = new LoginUsuario("nenhum dos dois");
+    log.escreve();
+  }
 }
