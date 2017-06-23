@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bean;
+package interfaces;
 
 /**
  *
@@ -11,5 +11,5 @@ package bean;
  * Padrão Strategy
  */
 public interface UsuarioInterface {
-    public String logarUsuario();
+  public String logarUsuario();
 }
