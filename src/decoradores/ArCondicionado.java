@@ -1,10 +1,15 @@
 package decoradores;
 
-import interfaces.CarroInterface;
+import bean.CarroPrototipo;
 
+/**
+ * Created by arthur
+ * Padrão Decorator
+ * Classe decorador concreto
+ */
 public class ArCondicionado extends CarroDecorado {
 
-  public ArCondicionado(CarroInterface carro) {
+  public ArCondicionado(CarroPrototipo carro) {
     super(carro);
   }
 

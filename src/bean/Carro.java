@@ -8,23 +8,31 @@ package bean;
 /**
  * @author cainan
  * Padrão Prototype
+ * Classe Protótipo
  */
 
-public abstract class Carro {
+public class Carro {
   private String placa;
   private String modelo;
   private String marca;
   private String cor;
+  private Carro carro;
 
-  public Carro(String placa, String modelo, String marca, String cor) {
-    this.placa = placa;
-    this.modelo = modelo;
-    this.marca = marca;
-    this.cor = cor;
+  public Carro(Carro c) {
+    this.placa = c.getPlaca();
+    this.modelo = c.getModelo();
+    this.marca = c.getMarca();
+    this.cor = c.getCor();
   }
+//    
+//  public Carro(String placa, String modelo, String marca, String cor){
+//    
+//  }
     
-  public abstract Carro clonar(String placa, String modelo, String marca, String cor);
-    
+  public Carro() {
+    // TODO Auto-generated constructor stub
+  }
+
   public String getCor() {
     return cor;
   }
@@ -55,5 +63,13 @@ public abstract class Carro {
 
   public void setMarca(String marca) {
     this.marca = marca;
+  }
+
+  public Carro getCarro() {
+    return carro;
+  }
+
+  public void setCarro(Carro carro) {
+    this.carro = carro;
   }
 }

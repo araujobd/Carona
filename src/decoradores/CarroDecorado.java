@@ -1,22 +1,17 @@
 package decoradores;
 
-import interfaces.CarroInterface;
+import bean.CarroPrototipo;
 
-
-/*
+/**
  * Created by arthur
  * Padrão Decorator
+ * Classe decorador
  */
-public abstract class CarroDecorado implements CarroInterface {
+public abstract class CarroDecorado extends CarroPrototipo{
   
-  private CarroInterface carro;
-  
+  public CarroDecorado(CarroPrototipo c){
+    super(c);
+  }
 
-  public CarroDecorado(CarroInterface carro) {
-    this.carro = carro;
-  }
-  
-  public void montar(){
-    this.carro.montar();
-  }
+  public abstract void montar();
 }

@@ -1,17 +1,21 @@
 package decoradores;
 
-import interfaces.CarroInterface;
+import bean.CarroPrototipo;
 
+/**
+ * Created by arthur
+ * Padrão Decorator
+ * Classe decorador concreto
+ */
 public class Airbag extends CarroDecorado {
 
-  public Airbag(CarroInterface carro) {
+  public Airbag(CarroPrototipo carro) {
     super(carro);
-    // TODO Auto-generated constructor stub
   }
 
   @Override
   public void montar() {
-    System.out.println("Carro seguro!!");
+    System.out.println("Carro com AirBag!!");
   }
 
 }

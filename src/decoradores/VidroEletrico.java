@@ -1,12 +1,16 @@
 package decoradores;
 
-import interfaces.CarroInterface;
+import bean.CarroPrototipo;
 
+/**
+ * Created by arthur
+ * Padrão Decorator
+ * Classe decorador concreto
+ */
 public class VidroEletrico extends CarroDecorado {
 
-  public VidroEletrico(CarroInterface carro) {
+  public VidroEletrico(CarroPrototipo carro) {
     super(carro);
-    // TODO Auto-generated constructor stub
   }
   
   @Override

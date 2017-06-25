@@ -10,16 +10,17 @@ import bean.Carro;
 /**
  * @author cainan
  * Padrão Prototype
+ * Classe protótipo
  */
 public class CarroPrototipo extends Carro{
 
-  public CarroPrototipo(String placa, String modelo, String marca, String cor) {
-    super(placa, modelo, marca, cor);
+  public CarroPrototipo(Carro carro) {
+    super(carro);
+    // TODO Auto-generated constructor stub
   }
 
-  @Override
-  public Carro clonar(String placa, String modelo, String marca, String cor) {
-    return new CarroPrototipo(placa, modelo, marca, cor);
+  public Carro clonar(CarroPrototipo carro) {
+    return new CarroPrototipo(carro);
   }
 
 }
