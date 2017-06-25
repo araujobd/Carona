@@ -38,7 +38,7 @@ public class Principal {
     
     //Carro
     ArrayList<CarroPrototipo> carros = new ArrayList<CarroPrototipo>();
-    Carro carro = new Carro();
+    CarroPrototipo carro = new CarroPrototipo();
         
     //setando carro
     carro.setPlaca("QWE1234");
@@ -47,7 +47,7 @@ public class Principal {
     carro.setCor("Branca");
     
     //adicionando no arrayList
-    carros.add(new CarroPrototipo(carro));
+    carros.add(carro.clonar(carro));
     
     //setando outro carro
     carro.setPlaca("ABC0000");
@@ -55,7 +55,7 @@ public class Principal {
     carro.setModelo("Lamborghini");
     carro.setCor("Rosa-Chock");
     
-    carros.add(new CarroPrototipo(carro));
+    carros.add(carro.clonar(carro));
     
     for (Carro c : carros) {
       System.out.println("Placa: " + c.getPlaca()

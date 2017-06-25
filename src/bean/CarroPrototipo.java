@@ -14,12 +14,15 @@ import bean.Carro;
  */
 public class CarroPrototipo extends Carro{
 
+  public CarroPrototipo() {
+  }
+  
   public CarroPrototipo(Carro carro) {
     super(carro);
     // TODO Auto-generated constructor stub
   }
 
-  public Carro clonar(CarroPrototipo carro) {
+  public CarroPrototipo clonar(CarroPrototipo carro) {
     return new CarroPrototipo(carro);
   }
 
