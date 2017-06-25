@@ -13,43 +13,34 @@ public class UsuarioDAO extends DAO<Usuario> {
   private UsuarioDAO(){
   }
 
-  public static DAO<Usuario> getInstance() {
+  public static UsuarioDAO getInstance() {
     if (INSTANCE == null)
       INSTANCE = new UsuarioDAO();
     return INSTANCE;
   }
 
   @Override
-  void adicionar(Usuario usuario) {
-//    usuarios.add(usuario);
-    System.out.println("Adicionando usuário:" + usuario);
+  public void adicionar(Usuario usuario) {
+    System.out.println("Adicionando usuário\n");
   }
 
   @Override
   void atualizar(Usuario usuario) {
-//    int i;
-//    for (i=0; i<usuarios.size(); i++)
-//      if (usuarios.get(i).getLogin().contentEquals(usuario.getLogin()))
-//        usuarios.set(i, usuario);
-    System.out.println("Editando um usuário: " + usuario);
+    System.out.println("Editando um usuário\n");
   }
 
   @Override
   void remover(Usuario usuario) {
-//    usuarios.remove(usuario);
-    System.out.println("Removendo usuário: " + usuario);
+    System.out.println("Removendo usuário\n");
   }
 
   @Override
   void buscar(int id) {
-//    for (Usuario usuario : usuarios)
-//      if (usuario.getLogin().contentEquals(String.valueOf(id)))
-//        return usuario;
-    System.out.println("Procurando usuário com o id = " + id);
+    System.out.println("Procurando usuário com o id\n");
   }
 
   @Override
   void listar() {
-    System.out.println("Listando todos os usuários do banco!");
+    System.out.println("Listando todos os usuários do banco!\n");
   }
 }
