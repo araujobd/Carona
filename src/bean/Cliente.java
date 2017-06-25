@@ -9,6 +9,6 @@ public class Cliente extends Usuario implements UsuarioInterface{
 
   @Override
   public String logarUsuario() {
-    return "Cliente logado!";
+    return "Cliente logado!\n";
   }
 }

@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * Created by bruno on 22/06/17.
- * Padrão Singleton
  */
 public class Oferta {
 

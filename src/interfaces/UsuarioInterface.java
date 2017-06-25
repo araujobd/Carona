@@ -9,6 +9,7 @@ package interfaces;
  *
  * @author cainan
  * Padrão Strategy
+ * Classe Estratégia
  */
 public interface UsuarioInterface {
   public String logarUsuario();

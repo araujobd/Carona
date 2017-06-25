@@ -4,6 +4,8 @@ import interfaces.UsuarioInterface;
 
 /**
  * Created by bruno on 22/06/17.
+ * Padrão Strategy
+ * Classe: estratégia concreta
  */
 public class Motorista extends Usuario implements UsuarioInterface{
 
@@ -11,7 +13,7 @@ public class Motorista extends Usuario implements UsuarioInterface{
 
   @Override
   public String logarUsuario() {
-    return "Motorista logado!";
+    return "Motorista logado!\n";
   }
 
 }
